@@ -1,16 +1,14 @@
 pragma solidity ^0.4.21;
 
-import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/CappedToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
 
 /**
  * @title GooberToken
  * @dev ERC20 Token
  */
-contract GooberToken is MintableToken {
-
-
-    string public constant name = "GooberToken"; // solium-disable-line uppercase
-    string public constant symbol = "GOOB"; // solium-disable-line uppercase
-    uint8 public constant decimals = 18; // solium-disable-line uppercase
-
+contract GooberToken is CappedToken, DetailedERC20 {
+  function GooberToken() 
+    CappedToken(10**9*10**18) 
+    DetailedERC20("Goober Token", "GOOB", 18) public {}
 }

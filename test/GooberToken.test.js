@@ -1,4 +1,3 @@
-//import decodeLogs from '../helpers/decodeLogs';
 const GooberToken = artifacts.require('GooberToken');
 
 contract('GooberToken', accounts => {
@@ -11,7 +10,7 @@ contract('GooberToken', accounts => {
 
   it('has a name', async function () {
     const name = await token.name();
-    assert.equal(name, 'GooberToken');
+    assert.equal(name, 'Goober Token');
   });
 
   it('has a symbol', async function () {
