@@ -1,8 +1,8 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.23;
 
-import "zeppelin-solidity/contracts/token/ERC20/CappedToken.sol";
-import "zeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
-import "zeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
 
 
 /**
@@ -10,7 +10,7 @@ import "zeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
  * @dev ERC20 Token
  */
 contract GooberToken is CappedToken, DetailedERC20, ERC827Token {
-    function GooberToken() 
+    constructor() 
         public
         CappedToken(10**9*10**18) 
         DetailedERC20("Goober Token", "GOOB", 18) {
