@@ -10,9 +10,9 @@ import "openzeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
  * @dev ERC20 Token
  */
 contract GooberToken is CappedToken, DetailedERC20, ERC827Token {
-    constructor() 
-        public
-        CappedToken(10**9*10**18) 
-        DetailedERC20("Goober Token", "GOOB", 18) {
-        }
+    constructor() public 
+
+    CappedToken(10**9*10**18) 
+    DetailedERC20("Goober Token", "GOOB", 18) {
+    }
 }
