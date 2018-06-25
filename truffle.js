@@ -25,6 +25,11 @@ module.exports = {
       port: 8545,
       network_id: '*', // eslint-disable-line camelcase
     },
+    ganache: {
+      host: '127.0.0.1',
+      port: 7545,
+      network_id: '*', // eslint-disable-line camelcase
+    },
     ropsten: {
       provider: ropstenProvider,
       network_id: 3, // eslint-disable-line camelcase
